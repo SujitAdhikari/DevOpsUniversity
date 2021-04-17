@@ -27,8 +27,8 @@ Topics:
 6. Software Engineering
 7. Socket Binding
 8. React
-9. Vueis
-10.Angular
+9. Vuejs
+10. Angular
 
 Spaces:
 ----------------------------------------
