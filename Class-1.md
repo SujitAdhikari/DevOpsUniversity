@@ -115,8 +115,11 @@ Ex:2[Check random port for every request, it is changing]
 [root@dns1 ~]# curl facebook.com
 
 [root@dns1 ~]# tcpdump -i ens192  dst facebook.com and port 443
+
 02:41:00.552012 IP dns1.example.com.51726 > 142.250.4.102.https: Flags [F.], seq                                                                                  																				 
-02:41:03.778937 IP dns1.example.com.51728 > 142.250.4.102.https: Flags [S], seq                                                                                                                                                   700684565, win 29200, options [mss 1460,sackOK,TS val 1674793431 ecr 0,nop,wscal e 7], length 0
+02:41:03.778937 IP dns1.example.com.51728 > 142.250.4.102.https: Flags [S], seq   
+
+700684565, win 29200, options [mss 1460,sackOK,TS val 1674793431 ecr 0,nop,wscal e 7], length 0
 
 **Port:** A port number is a 16-bit unsigned integer, thus ranging from 0 to 65535. port number is always associated with an IP address 
 		of a host and the type of transport protocol used for communication.
