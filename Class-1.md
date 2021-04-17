@@ -95,9 +95,9 @@ sujit
 [root@dns1 ~]# tcpdump -i lo
 02:26:08.015751 IP6 localhost.opsmessaging > localhost.38678: Flags [.], ack 17,                                                                                                                                                   win 342, options [nop,nop,TS val 1291093053 ecr 1291093053], length 0
 
-For Specific Port:
+Ex:1 [For Specific Port]:
 ---------------------------------------------
-
+[root@dns1 ~]# telnet localhost 8090
 [root@dns1 ~]# tcpdump -i lo port 8090
 
 Destination and port:
@@ -105,14 +105,14 @@ Destination and port:
 
 [root@dns1 ~]# tcpdump -i ens192  dst facebook.com and port 443
 
-02:34:03.174301 IP dns1.example.com.42674 > edge-star-mini-shv-01-sin6.facebook.                                                                                                                                                  com.https: Flags [S], seq 2968318325, win 29200, options [mss 1460,sackOK,TS val                                                                                                                                                   2906777749 ecr 0,nop,wscale 7], length 0
+02:34:03.174301 IP dns1.example.com.42674 > edge-star-mini-shv-01-sin6.facebook.                                                                                                com.https: Flags [S], seq 2968318325, win 29200, options [mss 1460,sackOK,TS val                                                                                                                                                   2906777749 ecr 0,nop,wscale 7], length 0
 5 packets captured
 9 packets received by filter
 0 packets dropped by kernel
 
 Ex:2[Check random port for every request, it is changing]
 ---------------------------------------------------------
-[root@dns1 ~]# telnet google.com 8090
+[root@dns1 ~]# curl facebook.com
 
 [root@dns1 ~]# tcpdump -i ens192  dst facebook.com and port 443
 02:41:00.552012 IP dns1.example.com.51726 > 142.250.4.102.https: Flags [F.], seq                                                                                  																				 
